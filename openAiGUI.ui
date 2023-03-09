@@ -1,0 +1,1514 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>MainWindow</class>
+ <widget class="QMainWindow" name="MainWindow">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>535</width>
+    <height>727</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>MainWindow</string>
+  </property>
+  <property name="styleSheet">
+   <string notr="true"/>
+  </property>
+  <widget class="QWidget" name="centralwidget">
+   <widget class="QFrame" name="mFrame">
+    <property name="geometry">
+     <rect>
+      <x>7</x>
+      <y>15</y>
+      <width>520</width>
+      <height>706</height>
+     </rect>
+    </property>
+    <property name="cursor">
+     <cursorShape>ArrowCursor</cursorShape>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">QFrame#mFrame{
+	background-color: #202123;
+	border-radius: 10;
+	border: 1.2px solid rgba(255,255,255,20);
+}
+
+QLabel{
+	color: white;
+}
+
+QLabel#title_dev{
+	color: rgba(255, 255, 255, 127);
+}
+
+QPushButton{
+	background-color: #292A2C;
+	border: 1.2px solid rgba(255,255,255,20);
+	border-radius: 5px;
+	color: white;
+}
+
+QFrame#fConfig{
+	background-color: #292A2C;
+	border: 1.2px solid rgba(255,255,255,20);
+	border-radius: 15;
+	padding: 20px;
+	color: white;
+}
+
+QSlider::groove:horizontal {
+    height: 2px;
+    background: white; 
+}
+
+QSlider::handle:horizontal {
+    width: 10px;
+    margin-top: -6px;
+    margin-bottom: -6px;
+    border-radius: 5px;
+	background-color: rgb(206, 206, 206);
+}
+
+QSlider::handle:horizontal:hover{
+	background-color: white;
+}</string>
+    </property>
+    <property name="frameShape">
+     <enum>QFrame::StyledPanel</enum>
+    </property>
+    <property name="frameShadow">
+     <enum>QFrame::Raised</enum>
+    </property>
+    <widget class="QFrame" name="frame_2">
+     <property name="geometry">
+      <rect>
+       <x>0</x>
+       <y>0</y>
+       <width>991</width>
+       <height>36</height>
+      </rect>
+     </property>
+     <property name="cursor">
+      <cursorShape>PointingHandCursor</cursorShape>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">QFrame#frame_2{
+	background-color: rgba(255, 255, 255, 0);
+}
+
+QLabel#title{
+	color: rgba(255, 255, 255, 127);
+}
+
+QPushButton#quitBtn{
+	border: none;
+	outline: none;
+	border-radius: 5;
+	color: rgba(255, 255, 255, 127);
+}
+
+QPushButton#quitBtn::hover{
+	color: white;
+}</string>
+     </property>
+     <property name="frameShape">
+      <enum>QFrame::StyledPanel</enum>
+     </property>
+     <property name="frameShadow">
+      <enum>QFrame::Raised</enum>
+     </property>
+    </widget>
+    <widget class="QLabel" name="tile">
+     <property name="geometry">
+      <rect>
+       <x>70</x>
+       <y>42</y>
+       <width>111</width>
+       <height>66</height>
+      </rect>
+     </property>
+     <property name="font">
+      <font>
+       <family>Roboto</family>
+       <pointsize>28</pointsize>
+       <weight>75</weight>
+       <bold>true</bold>
+      </font>
+     </property>
+     <property name="text">
+      <string>Open</string>
+     </property>
+     <property name="indent">
+      <number>0</number>
+     </property>
+    </widget>
+    <widget class="QLabel" name="title_span">
+     <property name="geometry">
+      <rect>
+       <x>180</x>
+       <y>42</y>
+       <width>46</width>
+       <height>66</height>
+      </rect>
+     </property>
+     <property name="font">
+      <font>
+       <family>Roboto</family>
+       <pointsize>28</pointsize>
+       <weight>75</weight>
+       <italic>true</italic>
+       <bold>true</bold>
+      </font>
+     </property>
+     <property name="text">
+      <string>AI</string>
+     </property>
+    </widget>
+    <widget class="QLabel" name="title_dev">
+     <property name="geometry">
+      <rect>
+       <x>228</x>
+       <y>69</y>
+       <width>221</width>
+       <height>26</height>
+      </rect>
+     </property>
+     <property name="font">
+      <font>
+       <family>Roboto</family>
+       <pointsize>10</pointsize>
+       <weight>50</weight>
+       <italic>true</italic>
+       <bold>false</bold>
+      </font>
+     </property>
+     <property name="text">
+      <string>/developedByJVB</string>
+     </property>
+     <property name="alignment">
+      <set>Qt::AlignBottom|Qt::AlignLeading|Qt::AlignLeft</set>
+     </property>
+    </widget>
+    <widget class="QLabel" name="copyBtn_tt">
+     <property name="geometry">
+      <rect>
+       <x>735</x>
+       <y>60</y>
+       <width>116</width>
+       <height>26</height>
+      </rect>
+     </property>
+     <property name="font">
+      <font>
+       <family>Roboto</family>
+       <pointsize>6</pointsize>
+       <italic>true</italic>
+      </font>
+     </property>
+     <property name="text">
+      <string/>
+     </property>
+     <property name="alignment">
+      <set>Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter</set>
+     </property>
+    </widget>
+    <widget class="QPlainTextEdit" name="usrInpt">
+     <property name="geometry">
+      <rect>
+       <x>18</x>
+       <y>615</y>
+       <width>481</width>
+       <height>61</height>
+      </rect>
+     </property>
+     <property name="font">
+      <font>
+       <family>Roboto</family>
+       <pointsize>10</pointsize>
+      </font>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">QPlainTextEdit#usrInpt{
+	background-color: #292A2C;
+	border: 1.2px solid rgba(255,255,255,20);
+	border-bottom-right-radius: 10px;
+	border-bottom-left-radius: 10px;
+	padding-left: 5px;
+	padding-right: 40px;
+	padding-top: 15px;
+	padding-bottom: 15px;
+	color: white;
+}</string>
+     </property>
+     <property name="verticalScrollBarPolicy">
+      <enum>Qt::ScrollBarAlwaysOff</enum>
+     </property>
+     <property name="horizontalScrollBarPolicy">
+      <enum>Qt::ScrollBarAlwaysOff</enum>
+     </property>
+     <property name="plainText">
+      <string/>
+     </property>
+     <property name="centerOnScroll">
+      <bool>false</bool>
+     </property>
+     <property name="placeholderText">
+      <string>type something here.</string>
+     </property>
+    </widget>
+    <widget class="QPushButton" name="submit">
+     <property name="geometry">
+      <rect>
+       <x>453</x>
+       <y>627</y>
+       <width>37</width>
+       <height>36</height>
+      </rect>
+     </property>
+     <property name="font">
+      <font>
+       <family>Roboto</family>
+       <pointsize>9</pointsize>
+      </font>
+     </property>
+     <property name="cursor">
+      <cursorShape>PointingHandCursor</cursorShape>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">#submit{
+	background-color: rgba(255, 255, 255,0);
+	border: none;
+}
+
+#submit::hover{
+	background-color: #202123;
+}
+
+#submit::pressed{
+	background-color: black;
+}</string>
+     </property>
+     <property name="text">
+      <string/>
+     </property>
+     <property name="icon">
+      <iconset>
+       <normaloff>assets/submit.png</normaloff>assets/submit.png</iconset>
+     </property>
+    </widget>
+    <widget class="QPlainTextEdit" name="aiPage">
+     <property name="geometry">
+      <rect>
+       <x>18</x>
+       <y>111</y>
+       <width>481</width>
+       <height>501</height>
+      </rect>
+     </property>
+     <property name="font">
+      <font>
+       <family>Roboto</family>
+       <pointsize>14</pointsize>
+      </font>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">QPlainTextEdit#aiPage{
+	background-color: #23272E;
+	border: 1.2px solid rgba(255,255,255,20);
+	border-top-right-radius: 10px;
+	border-top-left-radius: 10px;
+	padding: 20px;
+	padding-top: 50px;
+	color: white;
+}</string>
+     </property>
+     <property name="verticalScrollBarPolicy">
+      <enum>Qt::ScrollBarAlwaysOff</enum>
+     </property>
+     <property name="horizontalScrollBarPolicy">
+      <enum>Qt::ScrollBarAlwaysOff</enum>
+     </property>
+     <property name="readOnly">
+      <bool>true</bool>
+     </property>
+     <property name="plainText">
+      <string/>
+     </property>
+     <property name="placeholderText">
+      <string/>
+     </property>
+    </widget>
+    <widget class="QLabel" name="modelName">
+     <property name="geometry">
+      <rect>
+       <x>180</x>
+       <y>594</y>
+       <width>313</width>
+       <height>16</height>
+      </rect>
+     </property>
+     <property name="font">
+      <font>
+       <family>Roboto</family>
+       <pointsize>8</pointsize>
+       <italic>true</italic>
+      </font>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">color: rgba(0, 255, 0,127);</string>
+     </property>
+     <property name="text">
+      <string>text-davinci-003</string>
+     </property>
+     <property name="alignment">
+      <set>Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter</set>
+     </property>
+    </widget>
+    <widget class="QPushButton" name="quitBtn">
+     <property name="geometry">
+      <rect>
+       <x>486</x>
+       <y>0</y>
+       <width>34</width>
+       <height>34</height>
+      </rect>
+     </property>
+     <property name="font">
+      <font>
+       <family>Roboto</family>
+       <pointsize>11</pointsize>
+      </font>
+     </property>
+     <property name="cursor">
+      <cursorShape>PointingHandCursor</cursorShape>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">QPushButton#quitBtn{
+	background-color: rgba(0,0,0,0);
+	border: none;
+	border-radius: 0;
+	border-top-right-radius: 10px;
+}
+
+QPushButton#quitBtn::hover{
+	background-color: rgb(170, 0, 0);
+	color: white;
+}
+</string>
+     </property>
+     <property name="text">
+      <string>⨉</string>
+     </property>
+    </widget>
+    <widget class="QLabel" name="tile_2">
+     <property name="geometry">
+      <rect>
+       <x>21</x>
+       <y>51</y>
+       <width>46</width>
+       <height>46</height>
+      </rect>
+     </property>
+     <property name="font">
+      <font>
+       <family>Roboto</family>
+       <pointsize>28</pointsize>
+       <weight>75</weight>
+       <bold>true</bold>
+      </font>
+     </property>
+     <property name="text">
+      <string/>
+     </property>
+     <property name="pixmap">
+      <pixmap>assets/logo.png</pixmap>
+     </property>
+     <property name="scaledContents">
+      <bool>true</bool>
+     </property>
+     <property name="indent">
+      <number>0</number>
+     </property>
+    </widget>
+    <widget class="QLabel" name="wait">
+     <property name="geometry">
+      <rect>
+       <x>228</x>
+       <y>333</y>
+       <width>67</width>
+       <height>67</height>
+      </rect>
+     </property>
+     <property name="font">
+      <font>
+       <family>Roboto</family>
+       <pointsize>28</pointsize>
+       <weight>75</weight>
+       <bold>true</bold>
+      </font>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">border:none;
+border-radius: 10px;</string>
+     </property>
+     <property name="text">
+      <string/>
+     </property>
+     <property name="pixmap">
+      <pixmap>assets/loading.gif</pixmap>
+     </property>
+     <property name="scaledContents">
+      <bool>true</bool>
+     </property>
+     <property name="indent">
+      <number>0</number>
+     </property>
+    </widget>
+    <widget class="QFrame" name="frame">
+     <property name="geometry">
+      <rect>
+       <x>18</x>
+       <y>111</y>
+       <width>478</width>
+       <height>502</height>
+      </rect>
+     </property>
+     <property name="styleSheet">
+      <string notr="true"/>
+     </property>
+     <property name="frameShape">
+      <enum>QFrame::StyledPanel</enum>
+     </property>
+     <property name="frameShadow">
+      <enum>QFrame::Raised</enum>
+     </property>
+     <widget class="QLabel" name="tokenCount">
+      <property name="geometry">
+       <rect>
+        <x>9</x>
+        <y>9</y>
+        <width>49</width>
+        <height>25</height>
+       </rect>
+      </property>
+      <property name="font">
+       <font>
+        <family>Roboto</family>
+        <pointsize>9</pointsize>
+        <weight>75</weight>
+        <bold>true</bold>
+       </font>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">background-color: rgba(65, 65, 65, 120);
+border: none;
+border-radius: 8px;</string>
+      </property>
+      <property name="text">
+       <string>51</string>
+      </property>
+      <property name="alignment">
+       <set>Qt::AlignCenter</set>
+      </property>
+     </widget>
+     <widget class="QPushButton" name="settingsBtn">
+      <property name="geometry">
+       <rect>
+        <x>447</x>
+        <y>9</y>
+        <width>31</width>
+        <height>26</height>
+       </rect>
+      </property>
+      <property name="font">
+       <font>
+        <family>Roboto</family>
+        <italic>true</italic>
+       </font>
+      </property>
+      <property name="cursor">
+       <cursorShape>PointingHandCursor</cursorShape>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">
+background-color: rgba(0,0,0,0);
+border: none;
+</string>
+      </property>
+      <property name="text">
+       <string/>
+      </property>
+      <property name="icon">
+       <iconset>
+        <normaloff>assets/settings.png</normaloff>assets/settings.png</iconset>
+      </property>
+      <property name="checkable">
+       <bool>true</bool>
+      </property>
+      <property name="autoExclusive">
+       <bool>true</bool>
+      </property>
+     </widget>
+     <widget class="QPushButton" name="clearBtn">
+      <property name="geometry">
+       <rect>
+        <x>384</x>
+        <y>9</y>
+        <width>31</width>
+        <height>26</height>
+       </rect>
+      </property>
+      <property name="font">
+       <font>
+        <family>Roboto</family>
+        <italic>true</italic>
+       </font>
+      </property>
+      <property name="cursor">
+       <cursorShape>PointingHandCursor</cursorShape>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">
+background-color: rgba(0,0,0,0);
+border: none;</string>
+      </property>
+      <property name="text">
+       <string/>
+      </property>
+      <property name="icon">
+       <iconset>
+        <normaloff>assets/clear.png</normaloff>assets/clear.png</iconset>
+      </property>
+     </widget>
+     <widget class="QPushButton" name="speechBtn">
+      <property name="geometry">
+       <rect>
+        <x>63</x>
+        <y>9</y>
+        <width>31</width>
+        <height>26</height>
+       </rect>
+      </property>
+      <property name="font">
+       <font>
+        <family>Roboto</family>
+        <italic>true</italic>
+       </font>
+      </property>
+      <property name="cursor">
+       <cursorShape>PointingHandCursor</cursorShape>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">
+background-color: rgba(0,0,0,0);
+border: none;</string>
+      </property>
+      <property name="text">
+       <string/>
+      </property>
+      <property name="icon">
+       <iconset>
+        <normaloff>assets/speech.png</normaloff>assets/speech.png</iconset>
+      </property>
+     </widget>
+     <widget class="QPushButton" name="copyBtn">
+      <property name="geometry">
+       <rect>
+        <x>414</x>
+        <y>9</y>
+        <width>31</width>
+        <height>26</height>
+       </rect>
+      </property>
+      <property name="font">
+       <font>
+        <family>Roboto</family>
+        <italic>true</italic>
+       </font>
+      </property>
+      <property name="cursor">
+       <cursorShape>PointingHandCursor</cursorShape>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">
+background-color: rgba(0,0,0,0);
+border: none;</string>
+      </property>
+      <property name="text">
+       <string/>
+      </property>
+      <property name="icon">
+       <iconset>
+        <normaloff>assets/copy.png</normaloff>assets/copy.png</iconset>
+      </property>
+     </widget>
+     <widget class="QFrame" name="settingsContainer">
+      <property name="geometry">
+       <rect>
+        <x>132</x>
+        <y>0</y>
+        <width>349</width>
+        <height>501</height>
+       </rect>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">QFrame#settingsContainer{
+	background-color: #292A2C;
+	border: 1.2px solid rgba(255,255,255,20);
+	border-top-right-radius: 10px;
+}</string>
+      </property>
+      <property name="frameShape">
+       <enum>QFrame::StyledPanel</enum>
+      </property>
+      <property name="frameShadow">
+       <enum>QFrame::Raised</enum>
+      </property>
+      <widget class="QPushButton" name="closeBtn">
+       <property name="geometry">
+        <rect>
+         <x>315</x>
+         <y>9</y>
+         <width>31</width>
+         <height>26</height>
+        </rect>
+       </property>
+       <property name="font">
+        <font>
+         <family>Roboto</family>
+         <italic>true</italic>
+        </font>
+       </property>
+       <property name="cursor">
+        <cursorShape>PointingHandCursor</cursorShape>
+       </property>
+       <property name="styleSheet">
+        <string notr="true">
+background-color: rgba(0,0,0,0);
+border: none;
+</string>
+       </property>
+       <property name="text">
+        <string/>
+       </property>
+       <property name="icon">
+        <iconset>
+         <normaloff>assets/close.png</normaloff>assets/close.png</iconset>
+       </property>
+       <property name="checkable">
+        <bool>true</bool>
+       </property>
+       <property name="autoExclusive">
+        <bool>true</bool>
+       </property>
+      </widget>
+      <widget class="QPushButton" name="restore">
+       <property name="geometry">
+        <rect>
+         <x>12</x>
+         <y>9</y>
+         <width>31</width>
+         <height>26</height>
+        </rect>
+       </property>
+       <property name="font">
+        <font>
+         <family>Roboto</family>
+         <italic>true</italic>
+        </font>
+       </property>
+       <property name="cursor">
+        <cursorShape>PointingHandCursor</cursorShape>
+       </property>
+       <property name="styleSheet">
+        <string notr="true">
+background-color: rgba(0,0,0,0);
+border: none;
+</string>
+       </property>
+       <property name="text">
+        <string/>
+       </property>
+       <property name="icon">
+        <iconset>
+         <normaloff>assets/restore.png</normaloff>assets/restore.png</iconset>
+       </property>
+      </widget>
+      <widget class="QPushButton" name="saveBtn">
+       <property name="geometry">
+        <rect>
+         <x>39</x>
+         <y>9</y>
+         <width>31</width>
+         <height>26</height>
+        </rect>
+       </property>
+       <property name="font">
+        <font>
+         <family>Roboto</family>
+         <italic>true</italic>
+        </font>
+       </property>
+       <property name="cursor">
+        <cursorShape>PointingHandCursor</cursorShape>
+       </property>
+       <property name="styleSheet">
+        <string notr="true">
+background-color: rgba(0,0,0,0);
+border: none;
+</string>
+       </property>
+       <property name="text">
+        <string/>
+       </property>
+       <property name="icon">
+        <iconset resource="assets/icons.qrc">
+         <normaloff>:/newPrefix/submit.png</normaloff>:/newPrefix/submit.png</iconset>
+       </property>
+      </widget>
+      <widget class="QStackedWidget" name="stackedWidget">
+       <property name="geometry">
+        <rect>
+         <x>5</x>
+         <y>45</y>
+         <width>340</width>
+         <height>451</height>
+        </rect>
+       </property>
+       <property name="styleSheet">
+        <string notr="true"/>
+       </property>
+       <property name="currentIndex">
+        <number>0</number>
+       </property>
+       <widget class="QWidget" name="page">
+        <widget class="QSlider" name="maxL">
+         <property name="geometry">
+          <rect>
+           <x>14</x>
+           <y>225</y>
+           <width>306</width>
+           <height>22</height>
+          </rect>
+         </property>
+         <property name="cursor">
+          <cursorShape>PointingHandCursor</cursorShape>
+         </property>
+         <property name="minimum">
+          <number>1</number>
+         </property>
+         <property name="maximum">
+          <number>4000</number>
+         </property>
+         <property name="singleStep">
+          <number>1</number>
+         </property>
+         <property name="pageStep">
+          <number>10</number>
+         </property>
+         <property name="value">
+          <number>2048</number>
+         </property>
+         <property name="tracking">
+          <bool>true</bool>
+         </property>
+         <property name="orientation">
+          <enum>Qt::Horizontal</enum>
+         </property>
+        </widget>
+        <widget class="QSlider" name="pres">
+         <property name="geometry">
+          <rect>
+           <x>9</x>
+           <y>422</y>
+           <width>306</width>
+           <height>22</height>
+          </rect>
+         </property>
+         <property name="cursor">
+          <cursorShape>PointingHandCursor</cursorShape>
+         </property>
+         <property name="minimum">
+          <number>0</number>
+         </property>
+         <property name="maximum">
+          <number>100</number>
+         </property>
+         <property name="singleStep">
+          <number>1</number>
+         </property>
+         <property name="pageStep">
+          <number>10</number>
+         </property>
+         <property name="value">
+          <number>60</number>
+         </property>
+         <property name="tracking">
+          <bool>true</bool>
+         </property>
+         <property name="orientation">
+          <enum>Qt::Horizontal</enum>
+         </property>
+        </widget>
+        <widget class="QLabel" name="tempText">
+         <property name="geometry">
+          <rect>
+           <x>14</x>
+           <y>130</y>
+           <width>121</width>
+           <height>26</height>
+          </rect>
+         </property>
+         <property name="font">
+          <font>
+           <family>Roboto</family>
+           <pointsize>11</pointsize>
+          </font>
+         </property>
+         <property name="text">
+          <string>Temperature</string>
+         </property>
+         <property name="alignment">
+          <set>Qt::AlignLeading|Qt::AlignLeft|Qt::AlignVCenter</set>
+         </property>
+        </widget>
+        <widget class="QLabel" name="modelText_2">
+         <property name="geometry">
+          <rect>
+           <x>9</x>
+           <y>12</y>
+           <width>199</width>
+           <height>26</height>
+          </rect>
+         </property>
+         <property name="font">
+          <font>
+           <family>Roboto</family>
+           <pointsize>12</pointsize>
+           <weight>75</weight>
+           <bold>true</bold>
+          </font>
+         </property>
+         <property name="text">
+          <string>Settings</string>
+         </property>
+         <property name="alignment">
+          <set>Qt::AlignLeading|Qt::AlignLeft|Qt::AlignVCenter</set>
+         </property>
+        </widget>
+        <widget class="QLabel" name="freq_c">
+         <property name="geometry">
+          <rect>
+           <x>249</x>
+           <y>325</y>
+           <width>86</width>
+           <height>31</height>
+          </rect>
+         </property>
+         <property name="font">
+          <font>
+           <family>Roboto</family>
+           <pointsize>11</pointsize>
+          </font>
+         </property>
+         <property name="styleSheet">
+          <string notr="true">QLabel::hover{
+	border: .5px solid white;
+	border-radius: 5px;
+}</string>
+         </property>
+         <property name="text">
+          <string>0</string>
+         </property>
+         <property name="alignment">
+          <set>Qt::AlignCenter</set>
+         </property>
+        </widget>
+        <widget class="QLabel" name="maxL_c">
+         <property name="geometry">
+          <rect>
+           <x>249</x>
+           <y>195</y>
+           <width>86</width>
+           <height>31</height>
+          </rect>
+         </property>
+         <property name="font">
+          <font>
+           <family>Roboto</family>
+           <pointsize>11</pointsize>
+          </font>
+         </property>
+         <property name="styleSheet">
+          <string notr="true">QLabel::hover{
+	border: .5px solid white;
+	border-radius: 5px;
+}</string>
+         </property>
+         <property name="text">
+          <string>2048</string>
+         </property>
+         <property name="alignment">
+          <set>Qt::AlignCenter</set>
+         </property>
+        </widget>
+        <widget class="QSlider" name="temp">
+         <property name="geometry">
+          <rect>
+           <x>15</x>
+           <y>160</y>
+           <width>306</width>
+           <height>22</height>
+          </rect>
+         </property>
+         <property name="cursor">
+          <cursorShape>PointingHandCursor</cursorShape>
+         </property>
+         <property name="minimum">
+          <number>0</number>
+         </property>
+         <property name="maximum">
+          <number>100</number>
+         </property>
+         <property name="singleStep">
+          <number>1</number>
+         </property>
+         <property name="pageStep">
+          <number>10</number>
+         </property>
+         <property name="value">
+          <number>90</number>
+         </property>
+         <property name="tracking">
+          <bool>true</bool>
+         </property>
+         <property name="orientation">
+          <enum>Qt::Horizontal</enum>
+         </property>
+        </widget>
+        <widget class="QLabel" name="freqText">
+         <property name="geometry">
+          <rect>
+           <x>9</x>
+           <y>325</y>
+           <width>161</width>
+           <height>26</height>
+          </rect>
+         </property>
+         <property name="font">
+          <font>
+           <family>Roboto</family>
+           <pointsize>11</pointsize>
+          </font>
+         </property>
+         <property name="text">
+          <string>Frequency penalty</string>
+         </property>
+         <property name="alignment">
+          <set>Qt::AlignLeading|Qt::AlignLeft|Qt::AlignVCenter</set>
+         </property>
+        </widget>
+        <widget class="QLabel" name="presText">
+         <property name="geometry">
+          <rect>
+           <x>9</x>
+           <y>387</y>
+           <width>161</width>
+           <height>26</height>
+          </rect>
+         </property>
+         <property name="font">
+          <font>
+           <family>Roboto</family>
+           <pointsize>11</pointsize>
+          </font>
+         </property>
+         <property name="text">
+          <string>Presence penalty</string>
+         </property>
+         <property name="alignment">
+          <set>Qt::AlignLeading|Qt::AlignLeft|Qt::AlignVCenter</set>
+         </property>
+        </widget>
+        <widget class="QLabel" name="topPText">
+         <property name="geometry">
+          <rect>
+           <x>9</x>
+           <y>260</y>
+           <width>161</width>
+           <height>26</height>
+          </rect>
+         </property>
+         <property name="font">
+          <font>
+           <family>Roboto</family>
+           <pointsize>11</pointsize>
+          </font>
+         </property>
+         <property name="text">
+          <string>Top P</string>
+         </property>
+         <property name="alignment">
+          <set>Qt::AlignLeading|Qt::AlignLeft|Qt::AlignVCenter</set>
+         </property>
+        </widget>
+        <widget class="QLabel" name="pres_c">
+         <property name="geometry">
+          <rect>
+           <x>249</x>
+           <y>387</y>
+           <width>86</width>
+           <height>31</height>
+          </rect>
+         </property>
+         <property name="font">
+          <font>
+           <family>Roboto</family>
+           <pointsize>11</pointsize>
+          </font>
+         </property>
+         <property name="styleSheet">
+          <string notr="true">QLabel::hover{
+	border: .5px solid white;
+	border-radius: 5px;
+}</string>
+         </property>
+         <property name="text">
+          <string>0.6</string>
+         </property>
+         <property name="alignment">
+          <set>Qt::AlignCenter</set>
+         </property>
+        </widget>
+        <widget class="QLabel" name="maxLText">
+         <property name="geometry">
+          <rect>
+           <x>14</x>
+           <y>195</y>
+           <width>161</width>
+           <height>26</height>
+          </rect>
+         </property>
+         <property name="font">
+          <font>
+           <family>Roboto</family>
+           <pointsize>11</pointsize>
+          </font>
+         </property>
+         <property name="text">
+          <string>Maximum length</string>
+         </property>
+         <property name="alignment">
+          <set>Qt::AlignLeading|Qt::AlignLeft|Qt::AlignVCenter</set>
+         </property>
+        </widget>
+        <widget class="QLabel" name="modelText">
+         <property name="geometry">
+          <rect>
+           <x>14</x>
+           <y>50</y>
+           <width>71</width>
+           <height>26</height>
+          </rect>
+         </property>
+         <property name="font">
+          <font>
+           <family>Roboto</family>
+           <pointsize>11</pointsize>
+          </font>
+         </property>
+         <property name="text">
+          <string>Model</string>
+         </property>
+         <property name="alignment">
+          <set>Qt::AlignLeading|Qt::AlignLeft|Qt::AlignVCenter</set>
+         </property>
+        </widget>
+        <widget class="QLabel" name="topP_c">
+         <property name="geometry">
+          <rect>
+           <x>249</x>
+           <y>258</y>
+           <width>86</width>
+           <height>31</height>
+          </rect>
+         </property>
+         <property name="font">
+          <font>
+           <family>Roboto</family>
+           <pointsize>11</pointsize>
+          </font>
+         </property>
+         <property name="styleSheet">
+          <string notr="true">QLabel::hover{
+	border: .5px solid white;
+	border-radius: 5px;
+}</string>
+         </property>
+         <property name="text">
+          <string>1</string>
+         </property>
+         <property name="alignment">
+          <set>Qt::AlignCenter</set>
+         </property>
+        </widget>
+        <widget class="QSlider" name="topP">
+         <property name="geometry">
+          <rect>
+           <x>9</x>
+           <y>290</y>
+           <width>306</width>
+           <height>22</height>
+          </rect>
+         </property>
+         <property name="cursor">
+          <cursorShape>PointingHandCursor</cursorShape>
+         </property>
+         <property name="minimum">
+          <number>1</number>
+         </property>
+         <property name="maximum">
+          <number>100</number>
+         </property>
+         <property name="singleStep">
+          <number>1</number>
+         </property>
+         <property name="pageStep">
+          <number>10</number>
+         </property>
+         <property name="value">
+          <number>100</number>
+         </property>
+         <property name="tracking">
+          <bool>true</bool>
+         </property>
+         <property name="orientation">
+          <enum>Qt::Horizontal</enum>
+         </property>
+        </widget>
+        <widget class="QLabel" name="temp_c">
+         <property name="geometry">
+          <rect>
+           <x>248</x>
+           <y>125</y>
+           <width>86</width>
+           <height>31</height>
+          </rect>
+         </property>
+         <property name="font">
+          <font>
+           <family>Roboto</family>
+           <pointsize>11</pointsize>
+          </font>
+         </property>
+         <property name="styleSheet">
+          <string notr="true">QLabel::hover{
+	border: .5px solid white;
+	border-radius: 5px;
+}</string>
+         </property>
+         <property name="text">
+          <string>0.9</string>
+         </property>
+         <property name="alignment">
+          <set>Qt::AlignCenter</set>
+         </property>
+        </widget>
+        <widget class="QSlider" name="freq">
+         <property name="geometry">
+          <rect>
+           <x>9</x>
+           <y>360</y>
+           <width>306</width>
+           <height>22</height>
+          </rect>
+         </property>
+         <property name="cursor">
+          <cursorShape>PointingHandCursor</cursorShape>
+         </property>
+         <property name="minimum">
+          <number>0</number>
+         </property>
+         <property name="maximum">
+          <number>200</number>
+         </property>
+         <property name="singleStep">
+          <number>1</number>
+         </property>
+         <property name="pageStep">
+          <number>10</number>
+         </property>
+         <property name="value">
+          <number>0</number>
+         </property>
+         <property name="tracking">
+          <bool>true</bool>
+         </property>
+         <property name="orientation">
+          <enum>Qt::Horizontal</enum>
+         </property>
+        </widget>
+        <widget class="QPushButton" name="apiBtn">
+         <property name="geometry">
+          <rect>
+           <x>279</x>
+           <y>12</y>
+           <width>52</width>
+           <height>28</height>
+          </rect>
+         </property>
+         <property name="font">
+          <font>
+           <family>Roboto</family>
+           <pointsize>8</pointsize>
+           <weight>75</weight>
+           <bold>true</bold>
+          </font>
+         </property>
+         <property name="cursor">
+          <cursorShape>PointingHandCursor</cursorShape>
+         </property>
+         <property name="styleSheet">
+          <string notr="true">background-color: rgba(65, 65, 65, 120);
+border: none;</string>
+         </property>
+         <property name="text">
+          <string>API</string>
+         </property>
+        </widget>
+        <widget class="QComboBox" name="model">
+         <property name="geometry">
+          <rect>
+           <x>12</x>
+           <y>84</y>
+           <width>319</width>
+           <height>36</height>
+          </rect>
+         </property>
+         <property name="font">
+          <font>
+           <family>Roboto</family>
+           <pointsize>10</pointsize>
+           <weight>75</weight>
+           <bold>true</bold>
+          </font>
+         </property>
+         <property name="styleSheet">
+          <string notr="true">QComboBox{
+	color: white;
+	background-color: rgba(255, 255, 255, 0);
+	outline: none;
+}</string>
+         </property>
+         <item>
+          <property name="text">
+           <string>text-davinci-003</string>
+          </property>
+         </item>
+         <item>
+          <property name="text">
+           <string>text-curie-001</string>
+          </property>
+         </item>
+         <item>
+          <property name="text">
+           <string>text-babbage-001</string>
+          </property>
+         </item>
+         <item>
+          <property name="text">
+           <string>text-ada-001</string>
+          </property>
+         </item>
+         <item>
+          <property name="text">
+           <string>code-davinci-002</string>
+          </property>
+         </item>
+         <item>
+          <property name="text">
+           <string>code-cushman-001</string>
+          </property>
+         </item>
+        </widget>
+       </widget>
+       <widget class="QWidget" name="page_2">
+        <widget class="QLabel" name="modelText_3">
+         <property name="geometry">
+          <rect>
+           <x>9</x>
+           <y>12</y>
+           <width>199</width>
+           <height>26</height>
+          </rect>
+         </property>
+         <property name="font">
+          <font>
+           <family>Roboto</family>
+           <pointsize>12</pointsize>
+           <weight>75</weight>
+           <bold>true</bold>
+          </font>
+         </property>
+         <property name="text">
+          <string>Custom API</string>
+         </property>
+         <property name="alignment">
+          <set>Qt::AlignLeading|Qt::AlignLeft|Qt::AlignVCenter</set>
+         </property>
+        </widget>
+        <widget class="QPlainTextEdit" name="apiInpt">
+         <property name="geometry">
+          <rect>
+           <x>18</x>
+           <y>105</y>
+           <width>307</width>
+           <height>31</height>
+          </rect>
+         </property>
+         <property name="font">
+          <font>
+           <family>Roboto</family>
+           <pointsize>10</pointsize>
+          </font>
+         </property>
+         <property name="styleSheet">
+          <string notr="true">QPlainTextEdit#usrInpt{
+	background-color: #292A2C;
+	border: 1.2px solid rgba(255,255,255,20);
+	border-bottom-right-radius: 10px;
+	border-bottom-left-radius: 10px;
+	padding-top: 5px;
+	padding-left: 5px;
+	padding-right: 40px;
+	color: white;
+}</string>
+         </property>
+         <property name="verticalScrollBarPolicy">
+          <enum>Qt::ScrollBarAlwaysOff</enum>
+         </property>
+         <property name="horizontalScrollBarPolicy">
+          <enum>Qt::ScrollBarAlwaysOff</enum>
+         </property>
+         <property name="lineWrapMode">
+          <enum>QPlainTextEdit::WidgetWidth</enum>
+         </property>
+         <property name="plainText">
+          <string/>
+         </property>
+         <property name="placeholderText">
+          <string>enter your API here.</string>
+         </property>
+        </widget>
+        <widget class="QPushButton" name="setApiBtn">
+         <property name="geometry">
+          <rect>
+           <x>234</x>
+           <y>405</y>
+           <width>88</width>
+           <height>28</height>
+          </rect>
+         </property>
+         <property name="font">
+          <font>
+           <family>Roboto</family>
+           <pointsize>8</pointsize>
+           <weight>75</weight>
+           <bold>true</bold>
+          </font>
+         </property>
+         <property name="cursor">
+          <cursorShape>PointingHandCursor</cursorShape>
+         </property>
+         <property name="styleSheet">
+          <string notr="true">background-color: rgba(65, 65, 65, 120);
+border: none;</string>
+         </property>
+         <property name="text">
+          <string>CLOSE</string>
+         </property>
+        </widget>
+        <widget class="QLabel" name="modelText_4">
+         <property name="geometry">
+          <rect>
+           <x>18</x>
+           <y>72</y>
+           <width>71</width>
+           <height>26</height>
+          </rect>
+         </property>
+         <property name="font">
+          <font>
+           <family>Roboto</family>
+           <pointsize>11</pointsize>
+          </font>
+         </property>
+         <property name="text">
+          <string>API</string>
+         </property>
+         <property name="alignment">
+          <set>Qt::AlignLeading|Qt::AlignLeft|Qt::AlignVCenter</set>
+         </property>
+        </widget>
+        <widget class="QPushButton" name="ifNoApi">
+         <property name="geometry">
+          <rect>
+           <x>20</x>
+           <y>141</y>
+           <width>304</width>
+           <height>28</height>
+          </rect>
+         </property>
+         <property name="font">
+          <font>
+           <family>Roboto</family>
+           <pointsize>9</pointsize>
+           <italic>true</italic>
+          </font>
+         </property>
+         <property name="cursor">
+          <cursorShape>PointingHandCursor</cursorShape>
+         </property>
+         <property name="styleSheet">
+          <string notr="true">#ifNoApi{
+	background-color: none;
+	border: none;
+	text-align: right;
+}</string>
+         </property>
+         <property name="text">
+          <string>Dosen't have an API?</string>
+         </property>
+        </widget>
+       </widget>
+      </widget>
+      <zorder>stackedWidget</zorder>
+      <zorder>closeBtn</zorder>
+      <zorder>saveBtn</zorder>
+      <zorder>restore</zorder>
+     </widget>
+    </widget>
+    <zorder>aiPage</zorder>
+    <zorder>frame_2</zorder>
+    <zorder>tile</zorder>
+    <zorder>title_span</zorder>
+    <zorder>title_dev</zorder>
+    <zorder>copyBtn_tt</zorder>
+    <zorder>usrInpt</zorder>
+    <zorder>submit</zorder>
+    <zorder>modelName</zorder>
+    <zorder>quitBtn</zorder>
+    <zorder>tile_2</zorder>
+    <zorder>wait</zorder>
+    <zorder>frame</zorder>
+   </widget>
+  </widget>
+ </widget>
+ <resources>
+  <include location="assets/icons.qrc"/>
+ </resources>
+ <connections/>
+</ui>
