@@ -1,0 +1,18 @@
+<RCC>
+  <qresource prefix="newPrefix">
+    <file>clear.png</file>
+    <file>close.png</file>
+    <file>copy.png</file>
+    <file>down-arrow.png</file>
+    <file>loading.gif</file>
+    <file>logo.png</file>
+    <file>logo_tr.png</file>
+    <file>quit.png</file>
+    <file>restore.png</file>
+    <file>save.png</file>
+    <file>settings.png</file>
+    <file>speech.png</file>
+    <file>speech1.png</file>
+    <file>submit.png</file>
+  </qresource>
+</RCC>
