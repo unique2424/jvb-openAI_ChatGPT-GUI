@@ -782,7 +782,7 @@ border: none;
         <string notr="true"/>
        </property>
        <property name="currentIndex">
-        <number>0</number>
+        <number>1</number>
        </property>
        <widget class="QWidget" name="page">
         <widget class="QSlider" name="maxL">
@@ -1394,7 +1394,7 @@ border: none;</string>
           <enum>Qt::ScrollBarAlwaysOff</enum>
          </property>
          <property name="lineWrapMode">
-          <enum>QPlainTextEdit::WidgetWidth</enum>
+          <enum>QPlainTextEdit::NoWrap</enum>
          </property>
          <property name="plainText">
           <string/>

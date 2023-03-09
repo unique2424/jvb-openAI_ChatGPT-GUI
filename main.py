@@ -257,30 +257,30 @@ this parameters can eat into your token quota very quickly - use caution!'''
         pres   = float(self.pres_c.text())
         text   = self.aiPage.toPlainText()
 
-        if self.apiInpt.toPlainText() != '':
-            api = self.apiInpt.toPlainText()
-        else:
-            api = "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"
-
         if tr == 1:
-            self.wait.show()
-            self.aiPage.setPlainText('')
-            self.tokenCount.setText(str(len(self.usrInpt.toPlainText().split())))
-            self.thread[1] = ThreadClass(
-                parent = None,
-                index  = 1,
-                model  = model,
-                prompt = prompt,
-                temp   = temp,
-                maxL   = maxL,
-                topP   = topP,
-                freq   = freq,
-                pres   = pres,
-                text   = text,
-                api    = api)
+            if self.apiInpt.toPlainText() != '':
+                api = self.apiInpt.toPlainText()
+                self.wait.show()
+                self.aiPage.setPlainText('')
+                self.tokenCount.setText(str(len(self.usrInpt.toPlainText().split())))
+                self.thread[1] = ThreadClass(
+                    parent = None,
+                    index  = 1,
+                    model  = model,
+                    prompt = prompt,
+                    temp   = temp,
+                    maxL   = maxL,
+                    topP   = topP,
+                    freq   = freq,
+                    pres   = pres,
+                    text   = text,
+                    api    = api)
 
-            self.thread[1].start()
-            self.thread[1].aiPromptEmit.connect(self.aiPrompt)
+                self.thread[1].start()
+                self.thread[1].aiPromptEmit.connect(self.aiPrompt)
+            else:
+                self.stackedWidget.setCurrentIndex(1)
+                self.toggleSettingsContainer(True)
         elif tr == 2:
             self.thread[2] = ThreadClass(
                 parent = None,
