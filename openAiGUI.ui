@@ -766,7 +766,7 @@ border: none;
        </property>
        <property name="icon">
         <iconset resource="assets/icons.qrc">
-         <normaloff>:/newPrefix/submit.png</normaloff>:/newPrefix/submit.png</iconset>
+         <normaloff>:/newPrefix/save.png</normaloff>:/newPrefix/save.png</iconset>
        </property>
       </widget>
       <widget class="QStackedWidget" name="stackedWidget">
@@ -1487,8 +1487,8 @@ border: none;</string>
       </widget>
       <zorder>stackedWidget</zorder>
       <zorder>closeBtn</zorder>
-      <zorder>saveBtn</zorder>
       <zorder>restore</zorder>
+      <zorder>saveBtn</zorder>
      </widget>
     </widget>
     <zorder>aiPage</zorder>

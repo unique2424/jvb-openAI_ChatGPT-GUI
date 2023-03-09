@@ -1,7 +1,7 @@
 from PyQt5 import QtCore, QtWidgets, uic, QtGui
 from PyQt5.QtGui import QMovie
 from PyQt5.QtCore import QPropertyAnimation, QRect
-import pyperclip, openai, pyttsx3, webbrowser
+import pyperclip, openai, pyttsx3, webbrowser, json
 
 class Main(QtWidgets.QMainWindow):
     def __init__(self):
@@ -17,6 +17,9 @@ class Main(QtWidgets.QMainWindow):
         self.loading_gif = QMovie("assets/loading.gif")
         self.wait.setMovie(self.loading_gif)
         self.loading_gif.start()
+        
+        icon = QtGui.QPixmap('assets/save.png')
+        self.saveBtn.setIcon(QtGui.QIcon(icon))
 
         self.settingsContainer.setGeometry(483, 0, 349, 501)
         self.stackedWidget.setCurrentIndex(0)
@@ -64,7 +67,48 @@ class Main(QtWidgets.QMainWindow):
         self.apiBtn.clicked.connect(lambda: self.stackedWidget.setCurrentIndex(1))
         self.ifNoApi.clicked.connect(lambda: webbrowser.open_new_tab('https://platform.openai.com/account/api-keys'))
         self.apiInpt.textChanged.connect(self.setApiBtnLabel)
-    
+
+        if self.readConfig()["API"] == '':
+            self.stackedWidget.setCurrentIndex(1)
+            self.toggleSettingsContainer(True)
+        else:
+            self.apiInpt.setPlainText(self.readConfig()["API"])
+
+    def readConfig(self):
+        path = 'assets/config.json'
+        f = open(path)
+        data = json.load(f)
+
+        return data
+
+    def saveConfig(self):
+        self.toggleSettingsContainer(False)
+        self.stackedWidget.setCurrentIndex(0)
+        path = 'assets/config.json'
+
+        api    = self.apiInpt.toPlainText()
+        model  = str(self.model.currentText())
+        prompt = self.usrInpt.toPlainText()
+        temp   = float(self.temp_c.text())
+        maxL   = int(self.maxL_c.text())
+        topP   = float(self.topP_c.text())
+        freq   = float(self.freq_c.text())
+        pres   = float(self.pres_c.text())
+
+        data = {"API": api,
+                "model": model,
+                "prompt": prompt,
+                "temp": temp,
+                "maxL": maxL,
+                "topP": topP,
+                "freq": freq,
+                "pres": pres}
+        
+        json_object = json.dumps(data, indent=4)
+        
+        with open(path, "w") as outfile:
+            outfile.write(json_object)
+
     def restoreDafault(self):
         model = 0
         temp  = 90
@@ -72,7 +116,6 @@ class Main(QtWidgets.QMainWindow):
         topP  = 100
         freq  = 0
         pres  = 60
-        best  = 0
 
         self.model.setCurrentIndex(model)
         self.temp.setValue(temp)
@@ -80,7 +123,6 @@ class Main(QtWidgets.QMainWindow):
         self.topP.setValue(topP)
         self.freq.setValue(freq)
         self.pres.setValue(pres)
-        self.best.setValue(best)
 
     def presSlider(self):
         valStr = str(f"0.{self.pres.value()}")
@@ -168,10 +210,6 @@ this parameters can eat into your token quota very quickly - use caution!'''
             text = '''Clear'''
         return text
 
-    def saveConfig(self):
-        self.toggleSettingsContainer(False)
-        self.stackedWidget.setCurrentIndex(0)
-
     def copyText(self):
         pyperclip.copy(str(self.aiPage.toPlainText()))
         self.copyBtn_tt.setText('text Copied.')
@@ -258,7 +296,7 @@ this parameters can eat into your token quota very quickly - use caution!'''
         text   = self.aiPage.toPlainText()
 
         if tr == 1:
-            if self.apiInpt.toPlainText() != '':
+            if self.apiInpt.toPlainText().replace(' ', '') != '':
                 api = self.apiInpt.toPlainText()
                 self.wait.show()
                 self.aiPage.setPlainText('')
@@ -278,6 +316,8 @@ this parameters can eat into your token quota very quickly - use caution!'''
 
                 self.thread[1].start()
                 self.thread[1].aiPromptEmit.connect(self.aiPrompt)
+
+                self.btnToggle(False)
             else:
                 self.stackedWidget.setCurrentIndex(1)
                 self.toggleSettingsContainer(True)
@@ -298,7 +338,7 @@ this parameters can eat into your token quota very quickly - use caution!'''
             self.thread[2].start()
             self.thread[2].speechEmit.connect(self.speech)
 
-        self.btnToggle(False)
+            self.btnToggle(False)
     
     def speech(self, toggle):
         if toggle == True:

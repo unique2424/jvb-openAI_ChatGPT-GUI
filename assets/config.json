@@ -1,0 +1,10 @@
+{
+    "API": "",
+    "model": "text-davinci-003",
+    "prompt": "",
+    "temp": 0.9,
+    "maxL": 2048,
+    "topP": 1.0,
+    "freq": 0.0,
+    "pres": 0.6
+}
